@@ -20,8 +20,8 @@ Authorization: Token 3100697e3c7f039455b24d24ddc9352e7ca93e6e
 
 ###
 
-GET http://localhost:8000/app/1
+GET http://localhost:8000/app/
 Content-Type: application/json
-Authorization: Token 38cb3763cd3715e3773428e6b332a735d70ece58
+Authorization: Token a90e14beddff46fe3dd4a78c534f4148860d6863
 
 {}

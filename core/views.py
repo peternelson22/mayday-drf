@@ -9,8 +9,8 @@ from .serializers import PersonSerializer
 
 
 class Home(APIView):
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [SessionAuthentication, TokenAuthentication]
+    permission_classes = []
+    authentication_classes = []
     def get(self, request):
         persons = Person.objects.all()
         serializer = PersonSerializer(persons, many=True)
@@ -25,8 +25,8 @@ class Home(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class HomeDetails(APIView):
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [SessionAuthentication, TokenAuthentication]
+    permission_classes = []
+    authentication_classes = []
     def get_by_pk(self, pk):
         try:
             return Person.objects.get(id=pk)
